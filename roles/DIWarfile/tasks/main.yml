@@ -1,0 +1,20 @@
+- name: Create Resources Folder
+  file:
+    path: docker-folder
+    state: directory
+
+- name: Clone
+  git:
+    repo: "http://piajobelle:password123@54.215.47.70/gitlab/piajobelle1/Tomcat.git"
+    dest: docker-folder
+
+#- name: Download war file
+#  get_url:
+#    url: "http://54.215.47.70/nexus/service/local/repositories/snapshots/content/DTSActivity/CurrencyConverter/1.0/CurrencyConverter-1.0.war"
+#    dest: docker-folder/Resources
+#    mode: 0644
+#    url_password: "password123"
+#    url_username: "piajobelle"
+
+- name: Download war file
+  shell: "wget --user=piajobelle --password=password123 http://54.215.47.70/nexus/service/local/repositories/snapshots/content/DTSActivity/CurrencyConverter/1.0/CurrencyConverter-1.0.war -P docker-folder/Resources"
