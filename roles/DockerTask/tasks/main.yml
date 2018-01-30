@@ -1,6 +1,6 @@
 - name: Delete Container
   docker:
-    name: ansible-host
+    name: tomcat
     image: "{{ image_version }}"
     state: absent
 
@@ -13,7 +13,7 @@
 
 - name: Create Container
   docker:
-    name: ansible-host
+    name: tomcat
     image: "{{ image_version }}"
     state: started
     net: adop-network

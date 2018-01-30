@@ -1,5 +1,5 @@
 ---
-- hosts: ansible-host
+- hosts: tomcat
   roles:
     - { role: DIWarfile, tags: ['DIWarfile']}
     - { role: DockerTask, tags: ['DockerTask']}
