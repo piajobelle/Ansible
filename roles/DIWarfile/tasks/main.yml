@@ -5,7 +5,7 @@
 
 - name: Clone the tomcat repository
   git:
-    repo: "https://{{ username }}:{{ password }}@54.215.47.70/github.com/piajobelle/Ansible.git"
+    repo: "https://{{ gh_username }}:{{ gh_password }}@54.215.47.70/github.com/piajobelle/Ansible.git"
     dest: docker-folder
 
 - name: Download WAR file
@@ -13,5 +13,5 @@
     url: "http://54.215.47.70/nexus/service/local/repositories/snapshots/content/DTSActivity/CurrencyConverter/1.0/CurrencyConverter-1.0.war"
     dest: docker-folder/Resources
     mode: 0755
-    url_password: "{{ gh_password }}"
-    url_username: "{{ gh_username }}"
+    url_password: "{{ password }}"
+    url_username: "{{ username }}"
