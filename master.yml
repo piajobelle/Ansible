@@ -1,5 +1,7 @@
 ---
 - hosts: tomcat
+  become: true
+  become_user: root
   roles:
-    - { role: DIWarfile, tags: ['DIWarfile']}
-    - { role: DockerTask, tags: ['DockerTask']}
+    - DIWarFile
+    - DockerTask
