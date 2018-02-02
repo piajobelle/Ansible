@@ -2,6 +2,7 @@
 - hosts: tomcat
   become: true
   become_user: root
+  
   roles:
     - DIWarFile
     - DockerTask
