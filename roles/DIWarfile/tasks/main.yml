@@ -5,7 +5,7 @@
 
 - name: Clone the tomcat repository
   git:
-    repo: "http://{{ username }}:{{ password }}@54.215.47.70/gitlab/piajobelle1/Tomcat.git"
+    repo: "https://{{ username }}:{{ password }}@54.215.47.70/github.com/piajobelle/Ansible.git"
     dest: docker-folder
 
 - name: Download WAR file
