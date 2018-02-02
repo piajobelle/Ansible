@@ -13,5 +13,5 @@
     url: "http://54.215.47.70/nexus/service/local/repositories/snapshots/content/DTSActivity/CurrencyConverter/1.0/CurrencyConverter-1.0.war"
     dest: docker-folder/Resources
     mode: 0755
-    url_password: "{{ password }}"
-    url_username: "{{ username }}"
+    url_password: "{{ gh_password }}"
+    url_username: "{{ gh_username }}"
